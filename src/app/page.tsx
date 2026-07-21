@@ -103,7 +103,7 @@ export default function Home() {
           <div className="heroBackdrop" aria-hidden="true" />
           <nav className="topbar" aria-label="Primary navigation">
             <Link className="brand" href="/">
-              <Image src="/product/app-icon.png" alt="" width={42} height={42} priority />
+              <Image src="/product/app-icon.png" alt="" width={42} height={42} sizes="42px" priority />
               <span>{product.name}</span>
             </Link>
             <div className="navLinks">
@@ -135,8 +135,9 @@ export default function Home() {
                 className="phoneShot phoneShotMain"
                 src={screenshots[0].src}
                 alt={screenshots[0].alt}
-                width={1206}
-                height={2622}
+                width={900}
+                height={1956}
+                sizes="(max-width: 720px) 72vw, 360px"
                 priority
               />
             </div>
@@ -190,10 +191,12 @@ export default function Home() {
 
         <section className="showcase">
           <Image
-            src="/product/el-zone-palms.png"
+            src="/product/el-zone-palms.jpg"
             alt="Manual controls in Spencer's Camera."
-            width={1206}
-            height={2622}
+            width={900}
+            height={1956}
+            sizes="(max-width: 720px) 88vw, 420px"
+            loading="lazy"
           />
           <div className="showcaseCopy">
             <p className="sectionKicker">Manual and shutter priority</p>
@@ -210,7 +213,14 @@ export default function Home() {
         <section className="imageStrip" aria-label="Spencer's Camera screenshots">
           {screenshots.slice(1).map((shot) => (
             <figure key={shot.src}>
-              <Image src={shot.src} alt={shot.alt} width={1206} height={2622} />
+              <Image
+                src={shot.src}
+                alt={shot.alt}
+                width={900}
+                height={1956}
+                sizes="(max-width: 900px) 42vw, 280px"
+                loading="lazy"
+              />
               <figcaption>{shot.title}</figcaption>
             </figure>
           ))}
@@ -281,7 +291,7 @@ export default function Home() {
         </section>
 
         <section className="finalCta">
-          <Image src="/product/app-icon.png" alt="" width={72} height={72} />
+          <Image src="/product/app-icon.png" alt="" width={72} height={72} sizes="72px" />
           <p className="sectionKicker">Spencer&apos;s Camera</p>
           <h2>Built personally by Spencer for people who care about the image.</h2>
           <AppStoreBadge location="final-cta" />

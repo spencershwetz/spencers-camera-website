@@ -45,32 +45,32 @@ export const product = {
 
 export const screenshots = [
   {
-    src: "/product/recording.png",
+    src: "/product/recording.jpg",
     alt: "Spencer's Camera main recording screen with pro video controls.",
     title: "Production controls",
   },
   {
-    src: "/product/shutter-priority.png",
+    src: "/product/shutter-priority.jpg",
     alt: "Shutter priority controls in Spencer's Camera.",
     title: "Shutter priority",
   },
   {
-    src: "/product/el-zone-pier.png",
+    src: "/product/el-zone-pier.jpg",
     alt: "EL Zone exposure visualization in Spencer's Camera.",
     title: "EL Zone",
   },
   {
-    src: "/product/audio-input.png",
+    src: "/product/audio-input.jpg",
     alt: "Audio input controls in Spencer's Camera.",
     title: "Audio input",
   },
   {
-    src: "/product/lut-preview-road.png",
+    src: "/product/lut-preview-road.jpg",
     alt: "Workflow and professional video tools in Spencer's Camera.",
     title: "LUT preview",
   },
   {
-    src: "/product/ev-bias.png",
+    src: "/product/ev-bias.jpg",
     alt: "EV bias control in Spencer's Camera.",
     title: "EV bias",
   },
