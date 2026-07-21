@@ -14,11 +14,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const ogImageAlt =
+  "Spencer's Camera — pro iPhone video app with shutter angle, Apple Log, and production controls.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Spencer's Camera - iOS Pro Video Camera App for iPhone",
-    template: "%s - Spencer's Camera Website",
+    template: "%s - Spencer's Camera",
   },
   description: product.description,
   keywords: product.keywords,
@@ -37,10 +40,10 @@ export const metadata: Metadata = {
     description: product.description,
     images: [
       {
-        url: "/product/recording.png",
-        width: 1206,
-        height: 2622,
-        alt: "Spencer's Camera pro video controls on iPhone.",
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: ogImageAlt,
       },
     ],
   },
@@ -48,7 +51,19 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Spencer's Camera - iOS Pro Video Camera App for iPhone",
     description: product.description,
-    images: ["/product/recording.png"],
+    images: {
+      url: "/og.png",
+      alt: ogImageAlt,
+      width: 1200,
+      height: 630,
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  other: {
+    "apple-itunes-app": "app-id=6744284795",
   },
 };
 

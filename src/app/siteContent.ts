@@ -1,15 +1,26 @@
-export const siteUrl = "https://spencerscamera.app";
+// Custom domain not registered yet — keep the live Vercel hostname until DNS is ready.
+export const siteUrl = "https://spencers-camera-website.vercel.app";
 export const appStoreUrl =
   "https://apps.apple.com/us/app/pro-video-camera-by-spencer/id6744284795";
 export const supportEmail = "support@spencerscamera.app";
 
 export const product = {
   name: "Spencer's Camera",
-  websiteName: "Spencer's Camera Website",
+  websiteName: "Spencer's Camera",
   storeName: "Pro Video Camera by Spencer",
   subtitle: "iOS pro video, shutter priority, custom LUTs",
   description:
-    "Spencer's Camera is a personal, professional iOS camera app for iPhone video, built by film industry DIT Spencer Shwetz for filmmakers who want shutter angle, manual exposure, Apple Log, LUT preview, remote control, Apple Watch control, and production-ready recording tools.",
+    "Spencer's Camera is a pro iPhone video app with shutter angle, Apple Log, LUT preview, remote control, and Apple Watch tools — built by DIT Spencer Shwetz.",
+  features: [
+    "Cinema-style shutter angle and shutter priority",
+    "Manual exposure with EV bias and white balance",
+    "Apple Log, Apple Log 2, HLG HDR, and Dolby Vision",
+    "ProRes RAW and ProRes RAW HQ on supported devices",
+    "Live custom LUT preview and optional LUT baking",
+    "Peer-to-peer remote camera control",
+    "Apple Watch and Camera Control button support",
+    "EL Zone, audio metering, and external monitor output",
+  ],
   keywords: [
     "iOS camera app",
     "iOS video camera",

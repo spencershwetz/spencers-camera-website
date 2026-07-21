@@ -6,7 +6,7 @@ import { appStoreUrl, docsSections, product, siteUrl } from "../siteContent";
 export const metadata: Metadata = {
   title: "Docs",
   description:
-    "Complete Spencer's Camera documentation for setup, camera settings, exposure controls, recording, formats, LUTs, audio, storage, remote camera, DockKit, Apple Watch, display overlays, external monitors, shortcuts, presets, library export, and troubleshooting.",
+    "Spencer's Camera docs covering setup, exposure, recording formats, LUTs, audio, remote camera, Apple Watch, overlays, presets, export, and troubleshooting.",
   alternates: {
     canonical: "/docs",
   },
