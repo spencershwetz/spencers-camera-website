@@ -59,10 +59,11 @@ export default function DocsPage() {
             </p>
           </div>
           <Image
-            src="/product/lut-preview-road.png"
+            src="/product/lut-preview-road.jpg"
             alt="Spencer's Camera workflow screenshot."
-            width={1206}
-            height={2622}
+            width={900}
+            height={1956}
+            sizes="(max-width: 720px) 70vw, 340px"
             priority
           />
         </header>
