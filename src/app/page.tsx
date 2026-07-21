@@ -7,6 +7,7 @@ import {
   product,
   screenshots,
   siteUrl,
+  supportEmail,
 } from "./siteContent";
 
 function AppStoreBadge({ location }: { location: string }) {
@@ -25,6 +26,8 @@ function AppStoreBadge({ location }: { location: string }) {
 }
 
 export default function Home() {
+  const homepageFaqs = faqItems.slice(0, 3);
+
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -34,25 +37,27 @@ export default function Home() {
     operatingSystem: "iOS, watchOS",
     url: siteUrl,
     sameAs: [appStoreUrl],
+    downloadUrl: appStoreUrl,
     installUrl: appStoreUrl,
-    description: product.description,
-    featureList: product.keywords,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      ratingCount: "9",
-    },
+    description: `${product.description} Free to download; full access requires an in-app purchase (one-time or subscription).`,
+    featureList: product.features,
     offers: {
       "@type": "Offer",
+      name: "Free download",
       price: "0",
       priceCurrency: "USD",
+      description:
+        "Free to download on the App Store. Full access requires an in-app purchase, with one-time purchase and subscription options available.",
+      url: appStoreUrl,
+      availability: "https://schema.org/InStock",
+      category: "FreeTrial",
     },
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqItems.slice(0, 4).map((faq) => ({
+    mainEntity: homepageFaqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
@@ -60,6 +65,22 @@ export default function Home() {
         text: faq.answer,
       },
     })),
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: product.name,
+    url: siteUrl,
+    description: product.description,
+    publisher: {
+      "@type": "Organization",
+      name: product.name,
+      url: siteUrl,
+      logo: `${siteUrl}/product/app-icon.png`,
+      email: supportEmail,
+      sameAs: [appStoreUrl],
+    },
   };
 
   return (
@@ -71,6 +92,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       <main>
@@ -246,7 +271,7 @@ export default function Home() {
             <h2>Short answers before you download.</h2>
           </div>
           <div className="faqList">
-            {faqItems.slice(0, 3).map((faq) => (
+            {homepageFaqs.map((faq) => (
               <details key={faq.question}>
                 <summary>{faq.question}</summary>
                 <p>{faq.answer}</p>
