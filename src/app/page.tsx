@@ -20,7 +20,12 @@ function AppStoreBadge({ location }: { location: string }) {
       data-analytics-location={location}
       aria-label="Download Spencer's Camera on the App Store"
     >
-      <Image src="/app-store-badge.svg" alt="" width={156} height={52} />
+      <Image
+        src="/app-store-badge.svg"
+        alt="Download Spencer's Camera on the App Store"
+        width={156}
+        height={52}
+      />
     </a>
   );
 }
@@ -103,7 +108,7 @@ export default function Home() {
           <div className="heroBackdrop" aria-hidden="true" />
           <nav className="topbar" aria-label="Primary navigation">
             <Link className="brand" href="/">
-              <Image src="/product/app-icon.png" alt="" width={42} height={42} sizes="42px" priority />
+              <Image src="/product/app-icon.png" alt="Spencer's Camera app icon" width={42} height={42} sizes="42px" priority />
               <span>{product.name}</span>
             </Link>
             <div className="navLinks">
@@ -291,7 +296,7 @@ export default function Home() {
         </section>
 
         <section className="finalCta">
-          <Image src="/product/app-icon.png" alt="" width={72} height={72} sizes="72px" />
+          <Image src="/product/app-icon.png" alt="Spencer's Camera app icon" width={72} height={72} sizes="72px" />
           <p className="sectionKicker">Spencer&apos;s Camera</p>
           <h2>Built personally by Spencer for people who care about the image.</h2>
           <AppStoreBadge location="final-cta" />

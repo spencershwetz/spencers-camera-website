@@ -1,5 +1,5 @@
 // Custom domain not registered yet — keep the live Vercel hostname until DNS is ready.
-export const siteUrl = "https://spencers-camera-website.vercel.app";
+export const siteUrl = "https://camerapa.com";
 export const appStoreUrl =
   "https://apps.apple.com/us/app/pro-video-camera-by-spencer/id6744284795";
 export const supportEmail = "support@spencerscamera.app";

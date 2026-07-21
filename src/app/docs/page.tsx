@@ -38,7 +38,7 @@ export default function DocsPage() {
       <main className="subpage docsPage">
         <nav className="topbar subpageTopbar" aria-label="Primary navigation">
           <Link className="brand" href="/">
-            <Image src="/product/app-icon.png" alt="" width={42} height={42} />
+            <Image src="/product/app-icon.png" alt="Spencer's Camera app icon" width={42} height={42} />
             <span>{product.name}</span>
           </Link>
           <div className="navLinks">
